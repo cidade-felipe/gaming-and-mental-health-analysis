@@ -1,0 +1,6 @@
+pandas
+kagglehub
+plotly
+notebook
+ipykernel
+openpyxl
