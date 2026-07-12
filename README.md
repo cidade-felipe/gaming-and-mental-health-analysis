@@ -1,30 +1,28 @@
 # Gaming and Mental Health Analysis
 
-Análise de comportamento, dependência em jogos, saúde mental e produtividade, com preparação de dados em Python e relatório interativo em Power BI.
+Projeto de análise de dados sobre comportamento em jogos, dependência, saúde mental e produtividade, com tratamento em Python e visualização final em Power BI.
 
-## Visão geral
+## Sobre o projeto
 
-Este projeto investiga como hábitos de jogo se relacionam com dependência, sono, ansiedade, produtividade, risco de saúde mental e probabilidade de churn. A análise parte de uma base com 250 jogadores, trata os dados em Python e apresenta os resultados em um dashboard de três páginas no Power BI.
+A ideia deste projeto foi pegar um dataset público sobre hábitos de jogo e transformá-lo em uma análise visual mais clara, com uma narrativa que conectasse comportamento, risco de dependência, sono, ansiedade, produtividade e churn.
 
-Mais do que organizar os arquivos, o objetivo do projeto é transformar os dados em uma leitura prática sobre perfis de risco, padrões de comportamento e impactos associados ao excesso de jogo.
+O fluxo passa por preparação dos dados em Python, padronização das variáveis, tratamento de valores ausentes, tradução das categorias para português e construção de um dashboard interativo no Power BI.
 
-## Conclusões do projeto
+O dataset original está disponível no Kaggle: [Gaming Addiction and Mental Health Analysis](https://www.kaggle.com/datasets/dreamtensor/gaming-addiction-and-mental-health-analysis).
 
-**Fato:** a intensidade de jogo é o sinal mais forte associado ao score de dependência. A correlação entre horas diárias de jogo e score de dependência é de 0,861, o que indica uma relação positiva muito forte dentro desta base.
+## O que a análise mostrou
 
-**Fato:** quanto maior a severidade da dependência, maior o tempo médio de jogo e menor o tempo médio de sono. Jogadores sem dependência jogam em média 2,02 horas por dia e dormem 7,70 horas, enquanto jogadores com dependência severa jogam 10,68 horas por dia e dormem 5,84 horas.
+A relação mais forte do projeto aparece entre tempo diário de jogo e score de dependência. Na base analisada, a correlação entre essas duas variáveis é de 0,861, indicando que jogadores que passam mais horas jogando tendem a aparecer com scores maiores de dependência.
 
-**Fato:** ansiedade e risco de saúde mental caminham juntos no dataset. A correlação entre nível de ansiedade e score de risco de saúde mental é de 0,817, uma das relações mais fortes observadas na análise.
+Também fica bem clara a diferença entre os grupos de severidade. Jogadores sem dependência jogam, em média, 2,02 horas por dia e dormem 7,70 horas. Já os jogadores com dependência severa jogam 10,68 horas por dia e dormem 5,84 horas. Isso ajuda a mostrar como o excesso de jogo aparece acompanhado por uma rotina de sono pior.
 
-**Fato:** a dependência também aparece associada a queda de produtividade e impactos profissionais. Na categoria severa, a queda média de produtividade é de 28,38%, com 8,60 dias médios de absenteísmo e 4,40 prazos perdidos. Entre jogadores sem dependência, esses valores caem para 9,31%, 3,06 dias e 0,94 prazo perdido.
+Outro ponto forte da análise é a relação entre ansiedade e risco de saúde mental. A correlação entre nível de ansiedade e score de risco de saúde mental é de 0,817, uma das maiores do estudo.
 
-**Fato:** os perfis comportamentais com maior score médio de dependência são `Streamer/Criador` (50,43), `Jogador compulsivo` (47,38) e `Competidor intenso` (44,08). O perfil `Jogador casual` tem o menor score médio, 24,70.
+A dependência também aparece associada a impactos práticos na rotina. No grupo com dependência severa, a queda média de produtividade é de 28,38%, com 8,60 dias médios de absenteísmo e 4,40 prazos perdidos. Entre jogadores sem dependência, esses valores caem para 9,31%, 3,06 dias e 0,94 prazo perdido.
 
-**Inferência:** o tipo de jogador parece explicar melhor a dependência do que a plataforma isoladamente. As plataformas apresentam scores médios próximos, variando de 36,21 em console a 40,17 em PC e mobile, enquanto os perfis comportamentais variam de 24,70 a 50,43.
+Os perfis comportamentais com maior score médio de dependência são `Streamer/Criador`, com 50,43, `Jogador compulsivo`, com 47,38, e `Competidor intenso`, com 44,08. O perfil `Jogador casual` aparece com o menor score médio, 24,70.
 
-**Inferência:** a probabilidade de churn é alta em todos os grupos, mas cresce com a severidade. Jogadores sem dependência têm média de 70%, enquanto a categoria severa chega a 84%. A correlação direta entre score de dependência e churn é baixa, 0,133, então o churn provavelmente depende de outros fatores além da dependência.
-
-**Opinião técnica:** para um dashboard executivo, os melhores eixos narrativos são: intensidade de jogo, severidade da dependência, sono, ansiedade e produtividade. Esses temas concentram as relações mais claras do projeto.
+Em resumo, os recortes que mais ajudam a contar a história do projeto são intensidade de jogo, severidade da dependência, sono, ansiedade e produtividade.
 
 ## Indicadores gerais
 
@@ -36,41 +34,43 @@ Mais do que organizar os arquivos, o objetivo do projeto é transformar os dados
 - Risco médio de saúde mental: 51%
 - Probabilidade média de churn: 79,56%
 
-## Relatório
+## Dashboard
 
-### Página 1, visão geral
+O relatório foi organizado em três páginas no Power BI.
+
+### Visão geral
 
 ![Visão geral do relatório](figures/gaming-and-mental-health-report_Page1.png)
 
-A primeira página resume o tamanho da base, indicadores principais e distribuição de jogadores por perfil, país, plataforma e grau de dependência. Ela também mostra a relação visual entre horas diárias de jogo, dependência e risco de saúde mental.
+A primeira página reúne os principais indicadores e dá uma visão rápida da base, com filtros por país, gênero, ocupação, plataforma, gênero preferido, perfil, grau de dependência, assinatura e ranking.
 
-### Página 2, comportamento de jogo
+### Comportamento de jogo
 
 ![Comportamento de jogo](figures/gaming-and-mental-health-report_Page2.png)
 
-A segunda página aprofunda o comportamento de jogo, mostrando gasto por assinatura, sessões semanais por plataforma, horas médias por gênero preferido e distribuição dos perfis comportamentais.
+A segunda página olha para padrões de uso, gasto, plataforma, sessões semanais, gênero preferido e perfis comportamentais. Ela ajuda a entender como diferentes grupos jogam e gastam.
 
-### Página 3, saúde mental e produtividade
+### Saúde mental e produtividade
 
 ![Saúde mental e produtividade](figures/gaming-and-mental-health-report_Page3.png)
 
-A terceira página concentra os efeitos associados à saúde mental e produtividade, com destaque para sono, ansiedade, risco de saúde mental, absenteísmo, prazos perdidos, autocontrole, impulsividade e churn.
+A terceira página conecta o comportamento de jogo com saúde mental e produtividade, destacando sono, ansiedade, risco de saúde mental, autocontrole, impulsividade, absenteísmo, prazos perdidos e churn.
 
-## Dados e tratamento
+## Como os dados foram preparados
 
-O dataset original está disponível no Kaggle: [Gaming Addiction and Mental Health Analysis](https://www.kaggle.com/datasets/dreamtensor/gaming-addiction-and-mental-health-analysis).
+A base bruta possui 250 linhas e 49 colunas. Depois do tratamento, a base final fica com 250 linhas e 50 colunas, sem valores nulos, com nomes de colunas em português e um `id_usuario` numérico sequencial.
 
-A base bruta possui 250 linhas e 49 colunas. O tratamento em Python gera uma base final com 250 linhas e 50 colunas, sem valores nulos, com nomes de colunas traduzidos, categorias em português, `id_usuario` numérico sequencial e preservação do identificador original em `id_usuario_original`.
+O identificador original do dataset foi preservado em `id_usuario_original`, o que permite usar um ID simples no Power BI sem perder a rastreabilidade da base original.
 
-Durante o pré-processamento, o notebook:
+O pré-processamento inclui:
 
-1. Trata valores ausentes reais em `depression_indicator` e `gpa_or_performance_score`.
-2. Normaliza categorias sem assinatura e sem dependência.
-3. Traduz colunas e valores categóricos para português.
-4. Cria um ID numérico sequencial para uso no Power BI.
-5. Exporta os dados processados para CSV e XLSX.
+1. Tratamento de valores ausentes.
+2. Normalização de categorias.
+3. Tradução de colunas e valores categóricos.
+4. Criação de um ID numérico sequencial.
+5. Exportação para CSV e XLSX.
 
-## Tecnologias
+## Tecnologias usadas
 
 - Python
 - pandas
@@ -79,15 +79,20 @@ Durante o pré-processamento, o notebook:
 - Jupyter Notebook
 - Power BI
 
-As dependências Python do projeto estão listadas em `requirements.txt`. Para reproduzir o notebook, crie um ambiente virtual e instale os pacotes com:
+## Como executar
+
+Crie e ative um ambiente virtual:
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
 ```
 
-## Como executar
+Instale as dependências:
+
+```powershell
+pip install -r requirements.txt
+```
 
 Abra o notebook:
 
@@ -95,9 +100,9 @@ Abra o notebook:
 jupyter notebook notebooks/preprocessed.ipynb
 ```
 
-Execute as células em ordem. Ao final, os arquivos processados serão exportados para `data/processed/`.
+Depois de executar as células, os arquivos processados serão salvos em `data/processed/`.
 
-Para abrir o relatório no Power BI Desktop, use:
+Para abrir o dashboard no Power BI Desktop:
 
 ```text
 reports/gaming-and-mental-health-report.pbix
@@ -111,8 +116,8 @@ reports/pdf/gaming-and-mental-health-report.pdf
 
 ## Observações
 
-**Fato:** as conclusões acima foram calculadas a partir da base processada em `data/processed/gaming_addiction_preprocessed.csv`.
+As conclusões foram calculadas a partir da base processada em `data/processed/gaming_addiction_preprocessed.csv`.
 
-**Fato:** as imagens em `figures/gaming-and-mental-health-report_Page*.png` são prints das páginas finais do relatório.
+As imagens usadas neste README são prints das páginas finais do relatório e estão na pasta `figures/`.
 
-**Opinião técnica:** para análises estatísticas adicionais, é melhor preservar colunas decimais como numéricas. A versão atual exporta decimais com vírgula para facilitar a apresentação no Power BI em contexto brasileiro.
+As relações encontradas indicam associações dentro deste dataset, não causalidade. Para uma análise estatística mais profunda, o ideal é preservar as colunas decimais como numéricas e expandir os testes exploratórios.
